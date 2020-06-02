@@ -3,12 +3,6 @@
         "userName": "Pelle",
         "password": "12345",
         "email": "palle@gmail.com",
-        "wantsEmail": true
-    },
-    {
-        "userName": "Pelle2",
-        "password": "12345",
-        "email": "palle@gmail.com",
         "wantsEmail": false
     },
     {
