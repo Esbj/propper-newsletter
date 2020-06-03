@@ -4,8 +4,9 @@ import './index.css';
 class StartPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            value: '' 
+        this.state = {
+            userName: '',
+            password: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -14,30 +15,39 @@ class StartPage extends React.Component {
 
 
     handleChange(event) {
+        var key = event.target.name;
+        var value = event.target.value;
         this.setState({
-            value: event.target.value
+            [key]: value
         })
     };
 
-    handleSubmit(event){
-        event.PreventDefault();
-        this.setState({ value: this.state.value });
+    handleSubmit(event) {
+        // this.setState({ value: this.state.userName });
+        this.props.LogIn(this.state.userName, this.state.password)
+        event.preventDefault();
     };
 
-    tryLogin(){
-        const URL = 'localhost/3000';
-        fetch(URL)
-            .then(response => response.json())
-            .then(function (json){
-                //logga in
-            })
-    }
+
     render() {
         return (
             <div>
-                <form onSubmit = {this.handleSubmitt}>
-                    <input type="text" placeholder = "Användarnamn" value = {this.state.value} onChange={this.handleChange} />
-                    <input type="password" placeholder = "Lösenord" value = {this.state.value} onChange={this.handleChange} />
+                <form onSubmit={this.handleSubmitt}>
+                    <input
+                        type="text"
+                        placeholder="Användarnamn"
+                        value={this.state.userName}
+                        onChange={this.handleChange}
+                        name="userName"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Lösenord"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        name="password"
+                    />
+                    <input type="submit" name = "logIn" value="Logga In" onSubmit={this.handleSubmit} />
                 </form>
             </div>
         );
