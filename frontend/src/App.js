@@ -10,6 +10,10 @@ class App extends React.Component {
       loggedIn: false
     }
   }
+
+  logIn(){
+    //idk yet
+  }
   render() {
     return(
       this.state.loggedIn ? <LoggedIn/> : <StartPage />

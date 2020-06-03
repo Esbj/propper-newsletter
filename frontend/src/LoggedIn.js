@@ -5,7 +5,7 @@ class LoggedIn extends React.Component {
     render(){
 
         return(
-            <div> Nu är du inloggad!</div>
+            <div>Nu är du inloggad!</div>
         )
     }
 }
