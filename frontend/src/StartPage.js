@@ -32,7 +32,7 @@ class StartPage extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmitt}>
+                <form onSubmit = {this.handleSubmit}>
                     <input
                         type="text"
                         placeholder="Användarnamn"
@@ -47,7 +47,7 @@ class StartPage extends React.Component {
                         onChange={this.handleChange}
                         name="password"
                     />
-                    <input type="submit" name = "logIn" value="Logga In" onSubmit={this.handleSubmit} />
+                    <input type="submit" name = "logIn" value="Logga In" />
                 </form>
             </div>
         );

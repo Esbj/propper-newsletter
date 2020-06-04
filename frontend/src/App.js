@@ -13,23 +13,26 @@ class App extends React.Component {
 
   LogIn(userName, password) {
 
-    fetch("localhost:3002/users/logIn", {
+    fetch("http://localhost:3002/users/logIn", {
       method: "POST",
       headers: {
         "Content-type": 'application/json',
       },
-      body: JSON.stringify({
-        userName: userName,
-        password: password
+      "body": JSON.stringify({
+        userName: "Pelle",
+        password: "12345"
       })
     })
       .then(response => response.json())
-      .then(json =>{ this.setState({loggedIn: json})})
+      .then(logInStatus => {
+        console.log("Får logga in: " + logInStatus);
+        this.setState({loggedIn: logInStatus})
+      });
   }
 
   render() {
     return (
-      this.state.loggedIn ? <LoggedIn /> : <StartPage LogIn = {this.LogIn} />
+      this.state.loggedIn ? <LoggedIn /> : <StartPage LogIn={this.LogIn} />
     )
   }
 }

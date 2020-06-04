@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+var cors = require('cors');
+router.use(cors())
 
 /* POST Create new user */
 router.post('/', function(req, res) {
