@@ -9,7 +9,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       userId: null,
-      wantsEmail: false
+      wantsEmail: false,
+      loginAllowed: false,
+      userName: ''
     }
   }
 
@@ -31,18 +33,23 @@ class App extends React.Component {
         console.log("Vill ha e-post: " + data.subscribtionStatus);
         this.setState({
           userId: data.id,
-          wantsEmail: data.subscribtionStatus
+          wantsEmail: data.subscribtionStatus,
+          loginAllowed: true,
+          userName: userName
         })
       })
   }
 
 
   LogOut = () => {
-    this.setState({ userId: null });
+    this.setState({ 
+      loginAllowed: false 
+    })
   }
   render() {
+
     return (
-      this.state.userId ? <AccountPage LogOut={this.LogOut} /> : <StartPage LogIn={this.LogIn} />
+      this.state.loginAllowed ? <AccountPage LogOut={this.LogOut} userName={this.state.userName} /> : <StartPage LogIn={this.LogIn} />
     );
   };
 }

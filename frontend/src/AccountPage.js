@@ -7,8 +7,8 @@ class AccountPage extends React.Component {
         return(
             <div>
                 <p>Välkommen {this.props.userName}!</p> 
-                <button onClick={this.props.LogOut()}>Logga Ut</button>
-
+                <button onClick={this.props.LogOut}>Logga Ut</button>
+                
             </div>
         )
     }
