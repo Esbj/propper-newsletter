@@ -1,56 +1,17 @@
 import React from 'react';
 import './index.css';
+import ShowLogIn from './ShowLogIn'
+import RegisterUser from './RegisterPage'
 
-class StartPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            userName: '',
-            password: '',
-        };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    };
-
-
-    handleChange(event) {
-        var key = event.target.name;
-        var value = event.target.value;
-        this.setState({
-            [key]: value
-        })
-    };
-
-    handleSubmit(event) {
-        // this.setState({ value: this.state.userName });
-        this.props.LogIn(this.state.userName, this.state.password)
-        event.preventDefault();
-    };
-
-
-    render() {
-        return (
+class StartPage extends React.Component{
+    render(){
+        return(
             <div>
-                <form onSubmit = {this.handleSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Användarnamn"
-                        value={this.state.userName}
-                        onChange={this.handleChange}
-                        name="userName"
-                    />
-                    <input
-                        type="password"
-                        placeholder="Lösenord"
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                        name="password"
-                    />
-                    <input type="submit" name = "logIn" value="Logga In" />
-                </form>
+                <h2>Välkommen!</h2>
+                <ShowLogIn  LogIn={this.props.LogIn}></ShowLogIn>
+                <RegisterUser></RegisterUser>
             </div>
-        );
+        )
     }
 }
 

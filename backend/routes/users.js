@@ -37,11 +37,13 @@ router.post('/logIn', (req, res) =>{
     var users = JSON.parse(data);
 
     for (let i = 0; i < users.length; i++) {
-      const element = users[i];
+      const user = users[i];
 
-      if(element.password == req.body.password && element.userName == req.body.userName)
+      if(user.password == req.body.password && user.userName == req.body.userName)
       {
-        logInAllowed = true;
+        const subscribtionStatus = user.wantsEmail;
+        const id = i
+        res.send({id , subscribtionStatus})
       }
     }
     res.send(logInAllowed);
