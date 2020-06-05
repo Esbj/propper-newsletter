@@ -12,13 +12,8 @@ class App extends React.Component {
       wantsEmail: false
     }
   }
-  saveDetails = (id, sub) => {
-    this.setState({
-      userId: id,
-      wantsEmail: sub
-    })
-  }
-  LogIn(userName, password) {
+
+  LogIn = (userName, password) => {
 
     fetch("http://localhost:3002/users/logIn", {
       method: "POST",
@@ -26,24 +21,23 @@ class App extends React.Component {
         "Content-type": 'application/json',
       },
       "body": JSON.stringify({
-        userName: "Pelle",
-        password: "12345"
+        userName: userName,
+        password: password
       })
     })
       .then(response => response.json())
       .then(data => {
         console.log("Inlogg tillåtet för id: " + data.id);
         console.log("Vill ha e-post: " + data.subscribtionStatus);
-        this.saveDetails(data.id, data.subscribtionStatus);
-        // this.setState({
-        //   userId: data.id,
-        //   wantsEmail: data.subscribtionStatus
-        // })
+        this.setState({
+          userId: data.id,
+          wantsEmail: data.subscribtionStatus
+        })
       })
   }
 
 
-  LogOut () {
+  LogOut = () => {
     this.setState({ userId: null });
   }
   render() {

@@ -28,11 +28,11 @@ class RegisterUser extends React.Component {
                 <form onSubmit = {this.handleSubmitt}>
                     <label>Skapa användare</label>
                     <br></br>
-                    <input placeholder="Användarnamn" type="text" name=""  />
+                    <input placeholder="Användarnamn" type="text" name="" onChange = {this.handleChange} />
 
-                    <input placeholder="E-post" type="email" name=""  />
+                    <input placeholder="E-post" type="email" name="" onChange={this.handleChange} />
 
-                    <input placeholder="Lösenord" type="password" name="" />
+                    <input placeholder="Lösenord" type="password" name="" onChange={this.handleChange} />
                     <br></br>
                     <label>
                         Skicka nyhetsbrev

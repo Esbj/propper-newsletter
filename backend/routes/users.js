@@ -23,6 +23,7 @@ router.post('/', function(req, res) {
 
     res.send("Ny användare skapad!");
     res.send(newUser);
+    return;
   })
 })
 
@@ -44,9 +45,11 @@ router.post('/logIn', (req, res) =>{
         const subscribtionStatus = user.wantsEmail;
         const id = i
         res.send({id , subscribtionStatus})
+        return;
       }
     }
     res.send(logInAllowed);
+    return;
   })
 })
 
