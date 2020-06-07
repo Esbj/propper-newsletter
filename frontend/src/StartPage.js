@@ -9,7 +9,7 @@ class StartPage extends React.Component{
             <div>
                 <h2>Välkommen!</h2>
                 <ShowLogIn  LogIn={this.props.LogIn}></ShowLogIn>
-                <RegisterUser></RegisterUser>
+                <RegisterUser Register = {this.props.Register}></RegisterUser>
             </div>
         )
     }

@@ -1,20 +1,38 @@
 [
-    {
-        "userName": "Bella",
-        "password": "789",
-        "email": "bella@gmail.com",
-        "wantsEmail": true
-    },
-    {
-        "userName": "Pelle",
-        "password": "12345",
-        "email": "pelle@gmail.com",
-        "wantsEmail": true
-    },
-    {
-        "userName": "Karin",
-        "password": "54321",
-        "email": "karin@gmail.com",
-        "wantsEmail": false
-    }
+  {
+    "userName": "Bella",
+    "password": "789",
+    "email": "bella@gmail.com",
+    "wantsEmail": true
+  },
+  {
+    "userName": "Pelle",
+    "password": "12345",
+    "email": "pelle@gmail.com",
+    "wantsEmail": true
+  },
+  {
+    "userName": "Karin",
+    "password": "54321",
+    "email": "karin@gmail.com",
+    "wantsEmail": false
+  },
+  {
+    "userName": "Bella",
+    "password": "12345",
+    "email": "bella@gmail.com",
+    "wantsEmail": true
+  },
+  {
+    "userName": "BellaPella",
+    "password": "12345",
+    "email": "bella@gmail.com",
+    "wantsEmail": true
+  },
+  {
+    "userName": "kalle",
+    "password": "cool",
+    "email": "email@mail.com",
+    "wantsEmail": true
+  }
 ]

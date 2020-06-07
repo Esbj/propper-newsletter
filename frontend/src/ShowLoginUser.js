@@ -23,7 +23,10 @@ class ShowLogIn extends React.Component {
     };
 
     handleSubmit(event) {
-        this.setState({userName: this.state.userName, password: this.state.password});
+        this.setState({
+            userName: this.state.userName, 
+            password: this.state.password
+        });
         this.props.LogIn(this.state.userName, this.state.password);
         event.preventDefault();
     };

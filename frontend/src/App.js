@@ -29,12 +29,10 @@ class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log("Inlogg tillåtet för id: " + data.id);
-        console.log("Vill ha e-post: " + data.subscribtionStatus);
         this.setState({
           userId: data.id,
           wantsEmail: data.subscribtionStatus,
-          loginAllowed: true,
+          loginAllowed: data.logInAllowed,
           userName: userName
         })
       })
@@ -48,10 +46,10 @@ class App extends React.Component {
       },
 
       "body": JSON.stringify({
-        userName: "kalle",
-        password: "cool",
-        email: "email@mail.com",
-        wantsEmail: true
+        userName: userName,
+        password: password,
+        email: email,
+        wantsEmail: wantsEmail
       })
     })
       .then(response => response.json())
@@ -69,7 +67,7 @@ class App extends React.Component {
   render() {
 
     return (
-      this.state.loginAllowed ? <AccountPage LogOut={this.LogOut} userName={this.state.userName} /> : <StartPage LogIn={this.LogIn} />
+      this.state.loginAllowed ? <AccountPage LogOut={this.LogOut} userName={this.state.userName} /> : <StartPage LogIn={this.LogIn} Register = {this.Register} />
     );
   };
 }

@@ -8,7 +8,7 @@ router.use(cors())
 router.post('/', function(req, res) {
   fs.readFile('users.json', (err, data)=>{
     if(err)throw err;
-    var users = JSON.parse(data)
+    var users = JSON.parse(data);
     var newUser = 
     {
       "userName": req.body.userName,
@@ -21,7 +21,6 @@ router.post('/', function(req, res) {
 
     fs.writeFile('users.json', saveUser, (err, data)=>{if (err) throw err;})
 
-    res.send("Ny användare skapad!");
     res.send(newUser);
     return;
   })
@@ -44,7 +43,8 @@ router.post('/logIn', (req, res) =>{
       {
         const subscribtionStatus = user.wantsEmail;
         const id = i
-        res.send({id , subscribtionStatus})
+        logInAllowed = true;
+        res.send({id , subscribtionStatus, logInAllowed})
         return;
       }
     }
