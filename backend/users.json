@@ -3,7 +3,7 @@
     "userName": "Bella",
     "password": "789",
     "email": "bella@gmail.com",
-    "wantsEmail": true
+    "wantsEmail": false
   },
   {
     "userName": "Pelle",
@@ -15,24 +15,12 @@
     "userName": "Karin",
     "password": "54321",
     "email": "karin@gmail.com",
-    "wantsEmail": false
-  },
-  {
-    "userName": "Bella",
-    "password": "12345",
-    "email": "bella@gmail.com",
-    "wantsEmail": true
-  },
-  {
-    "userName": "BellaPella",
-    "password": "12345",
-    "email": "bella@gmail.com",
     "wantsEmail": true
   },
   {
     "userName": "kalle",
     "password": "cool",
-    "email": "email@mail.com",
+    "email": "cooling@gmail.com",
     "wantsEmail": true
   }
 ]

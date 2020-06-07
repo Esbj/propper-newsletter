@@ -23,8 +23,8 @@ Reflektion
 
 ## FRONTEND
 
-~~Logga in~~=> Ändra prenumerationsstatus
-Registrera ny användare som ska sparas i JSON fil på servern
+~~Logga in=> Ändra prenumerationsstatus
+~~Registrera ny användare som ska sparas i JSON fil på servern~~
 
 scrpit.js
 LogIn();

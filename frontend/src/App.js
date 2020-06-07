@@ -67,7 +67,7 @@ class App extends React.Component {
   render() {
 
     return (
-      this.state.loginAllowed ? <AccountPage LogOut={this.LogOut} userName={this.state.userName} /> : <StartPage LogIn={this.LogIn} Register = {this.Register} />
+      this.state.loginAllowed ? <AccountPage LogOut={this.LogOut} userName={this.state.userName} Id = {this.state.userId}/> : <StartPage LogIn={this.LogIn} Register = {this.Register} />
     );
   };
 }

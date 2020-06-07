@@ -53,4 +53,28 @@ router.post('/logIn', (req, res) =>{
   })
 })
 
+
+/*PUT Update subscribtion status*/
+
+router.put('/updateSubscriber', (req, res) => {
+  fs.readFile('users.json', (err,data) =>{
+    if (err) throw err;
+
+    var users = JSON.parse(data);
+
+    for (let i = 0; i < users.length; i++) {
+      if (req.body.Id == i){
+        users[i].wantsEmail = req.body.subscribtionStatus
+        var saveUser = JSON.stringify(users, null, 2);
+        fs.writeFile('users.json', saveUser, (err, data) => {if (err) throw err})
+
+        res.send("Status updaterad för användare" + i)
+        return;
+      }
+    }
+    res.send("Did not find a matching user in the database")
+    return;
+
+  })
+})
 module.exports = router;
