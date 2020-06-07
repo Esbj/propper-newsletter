@@ -1,14 +1,20 @@
 [
     {
+        "userName": "Bella",
+        "password": "789",
+        "email": "bella@gmail.com",
+        "wantsEmail": true
+    },
+    {
         "userName": "Pelle",
         "password": "12345",
-        "email": "palle@gmail.com",
-        "wantsEmail": false
+        "email": "pelle@gmail.com",
+        "wantsEmail": true
     },
     {
         "userName": "Karin",
         "password": "54321",
         "email": "karin@gmail.com",
-        "wantsEmail": true
+        "wantsEmail": false
     }
 ]

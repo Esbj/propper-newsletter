@@ -40,6 +40,26 @@ class App extends React.Component {
       })
   }
 
+  Register = (userName, password, email, wantsEmail) => {
+    fetch("http://localhost:3002/users/", {
+      method: "POST",
+      headers: {
+        "Content-type": 'application/json',
+      },
+
+      "body": JSON.stringify({
+        userName: "kalle",
+        password: "cool",
+        email: "email@mail.com",
+        wantsEmail: true
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Inlogg skapat för "+ userName)
+      })
+  }
+
 
   LogOut = () => {
     this.setState({ 

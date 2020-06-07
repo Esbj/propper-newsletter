@@ -17,14 +17,14 @@ class RegisterUser extends React.Component {
 
     handleChange(event){
         var key = event.target.name;
-        var value = event.target.value === 'wantsEmail' ? event.target.checked : event.target.value;
+        var value = event.target.value
         this.setState({
             [key]: value
         })
     };
 
     handleSubmitt(){
-
+        
     }
     render() {
         return (
@@ -33,7 +33,7 @@ class RegisterUser extends React.Component {
                     <label>Skapa användare</label>
                     <br></br>
                     <input placeholder="Användarnamn" type="text" name="userName" onChange = {this.handleChange} />
-                    <input placeholder="E-post" type="email" name="email" onChange={this.handleChange} />
+                    <input placeholder="E-post" type="text" name="email" onChange={this.handleChange} />
                     <input placeholder="Lösenord" type="password" name="password" onChange={this.handleChange} />
                     <br>
                     </br>

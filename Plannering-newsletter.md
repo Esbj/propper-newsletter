@@ -1,4 +1,4 @@
-# Endpoints 
+## NEWSLETTER
 
 ## Backend
 
@@ -12,6 +12,7 @@
 
 ~~GET alla användare~~
 ~~GET mailadresser i en sträng med komman~~
+~~admin sida för användardata~~
 
 __*VG* Krav__
 
@@ -22,7 +23,7 @@ Reflektion
 
 ## FRONTEND
 
-Logga in => Ändra prenumerationsstatus
+~~Logga in~~=> Ändra prenumerationsstatus
 Registrera ny användare som ska sparas i JSON fil på servern
 
 scrpit.js

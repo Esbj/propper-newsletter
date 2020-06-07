@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
-import ShowLogIn from './ShowLogIn'
-import RegisterUser from './RegisterPage'
+import ShowLogIn from './ShowLoginUser'
+import RegisterUser from './ShowRegisterUser'
 
 class StartPage extends React.Component{
     render(){
